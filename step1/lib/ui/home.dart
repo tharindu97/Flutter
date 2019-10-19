@@ -7,8 +7,25 @@ class Home extends StatelessWidget{
     return new Container(
       color: Colors.amberAccent,
       alignment: Alignment.center,
-      
 
+      child: new Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+
+        children: <Widget>[
+          new Text("Item1", textDirection: TextDirection.ltr,
+          style: TextStyle(fontSize: 12.9),
+          ),
+
+          new Text("Item1", textDirection: TextDirection.ltr,
+          style: TextStyle(fontSize: 12.9),
+          ),
+          const Expanded(
+            child: const Text("Item3"),
+          )
+        ],
+      ),
+      
+/*
       child: new Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
@@ -35,7 +52,7 @@ class Home extends StatelessWidget{
             ),
           )
         ],
-      ),
+      ),*/
     );
   }
 
