@@ -8,7 +8,17 @@ class Home extends StatelessWidget{
       color: Colors.amberAccent,
       alignment: Alignment.center,
 
-      child: new Row(
+
+      child: new Stack(
+        alignment: Alignment.bottomCenter,
+        children: <Widget>[
+          const Text("panama"),
+          const Text("tharindu"),
+          const Text("1")
+        ],
+      ),
+
+     /* child: new Row(
         mainAxisAlignment: MainAxisAlignment.center,
 
         children: <Widget>[
@@ -23,7 +33,7 @@ class Home extends StatelessWidget{
             child: const Text("Item3"),
           )
         ],
-      ),
+      ),*/
       
 /*
       child: new Column(
