@@ -1,10 +1,31 @@
 import 'package:flutter/material.dart';
 
 class Home extends StatelessWidget{
+
+  void _onPress(){
+          print("search Tapped");
+        }
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
-    return new Container(
+    return new Scaffold(
+      appBar: new AppBar(
+        backgroundColor: Colors.amberAccent,
+        title: new Text("Fency Day"),
+        actions: <Widget>[
+          new IconButton(
+            icon: new Icon(Icons.send),
+            onPressed: () => debugPrint("Icon Tapped"),
+          ),
+          new IconButton(
+            icon: new Icon(Icons.search),
+            onPressed: _onPress,
+          )
+        ],
+      ),
+    );
+    /*
+    new Container(
       color: Colors.amberAccent,
       alignment: Alignment.center,
 
@@ -16,7 +37,7 @@ class Home extends StatelessWidget{
           const Text("tharindu"),
           const Text("1")
         ],
-      ),
+      ),*/
 
      /* child: new Row(
         mainAxisAlignment: MainAxisAlignment.center,
@@ -63,7 +84,7 @@ class Home extends StatelessWidget{
           )
         ],
       ),*/
-    );
+  
   }
 
 }
