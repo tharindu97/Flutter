@@ -10,7 +10,7 @@ class Home extends StatelessWidget{
     // TODO: implement build
     return new Scaffold(
       appBar: new AppBar(
-        backgroundColor: Colors.amberAccent,
+        backgroundColor: Colors.greenAccent,
         title: new Text("Fency Day"),
         actions: <Widget>[
           new IconButton(
@@ -22,6 +22,30 @@ class Home extends StatelessWidget{
             onPressed: _onPress,
           )
         ],
+      ),
+
+
+      //other
+      backgroundColor: Colors.grey.shade100,
+      body: new Container(
+        alignment: Alignment.center,
+        child: new Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            new Text("tharindu",
+            style: new TextStyle(
+              fontSize: 14.5,
+              fontWeight: FontWeight.w400,
+              color: Colors.deepOrange
+            ),
+            ),
+
+            new InkWell(
+              child: new Text("Button"),
+              onTap: ()=>debugPrint("Button Tapped"),
+            )
+          ],
+        ),
       ),
     );
     /*
