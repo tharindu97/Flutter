@@ -47,6 +47,13 @@ class Home extends StatelessWidget{
           ],
         ),
       ),
+      bottomNavigationBar: new BottomNavigationBar(items: [
+        new BottomNavigationBarItem(icon: new Icon(Icons.add),title: new Text("add")),
+        new BottomNavigationBarItem(icon: new Icon(Icons.print),title: new Text("print")),
+        new BottomNavigationBarItem(icon: new Icon(Icons.call_missed),title: new Text("Call")),
+      ],
+      onTap: (int i)=> debugPrint("hey toch $i"),
+      ),
     );
     /*
     new Container(
