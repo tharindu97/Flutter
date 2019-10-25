@@ -12,19 +12,23 @@ class HomeState  extends State<Home>{
   final TextEditingController _weightController = new TextEditingController();
   int radioValue = 0;
   double _finalResult = 0.0;
+  String _formattedText = "";
   void handleRadioValueChange(int value){
     setState(() {
      radioValue = value;
      switch(radioValue){
       case 0:
               _finalResult = calculateWeight(_weightController.text,0.06);
+              _formattedText = "You weight on Pluto is ${_finalResult.toStringAsFixed(1)}";
               break;
       case 1:
               _finalResult = calculateWeight(_weightController.text,0.38);
+              _formattedText = "You weight on Mars is ${_finalResult.toStringAsFixed(1)}";
               break;
 
       case 2:
               _finalResult = calculateWeight(_weightController.text,0.91);
+              _formattedText = "You weight on Venus is ${_finalResult.toStringAsFixed(1)}";
               break;
        
             }
@@ -104,8 +108,10 @@ class HomeState  extends State<Home>{
        
                            new Padding(padding: new EdgeInsets.all(15.6),),
                            //Result Text
-                           new Text("$_finalResult",
-                             style: new TextStyle(
+                           new Text( 
+                            // _weightController.text.isEmpty ? "Please enter weight" : _formattedText + "lbs",
+                              "$_formattedText lbs",
+                               style: new TextStyle(
                                color: Colors.white,
                                fontSize: 19.4,
                                fontWeight: FontWeight.w500
