@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+
+import 'home_page.dart';
 class LoginPage extends StatefulWidget{
   static String tag = 'login_page';
   @override
@@ -56,7 +58,9 @@ class LoginPage extends StatefulWidget{
         child: MaterialButton(
           minWidth: 200.0,
           height: 42.0,
-          onPressed: () {},
+          onPressed: () {
+            Navigator.of(context).pushNamed(HomePage.tag);
+          },
           color: Colors.lightBlueAccent,
           child: Text('Log In', style: TextStyle(color: Colors.white),),
         ),

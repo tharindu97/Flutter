@@ -4,6 +4,11 @@ import 'home_page.dart';
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget{
+
+  final routes = <String, WidgetBuilder>{
+    LoginPage.tag: (cotext) => LoginPage(),
+    HomePage.tag: (cotext) => HomePage(),
+  };
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -13,7 +18,8 @@ class MyApp extends StatelessWidget{
         primarySwatch: Colors.lightBlue,
         fontFamily: 'Nunito',
       ),
-      home: HomePage(),
+      home: LoginPage(),
+      routes: routes,
     );
   }
 }
