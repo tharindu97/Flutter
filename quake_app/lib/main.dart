@@ -4,7 +4,6 @@ void main(){
     home: new HomePage(),
     
     routes: <String, WidgetBuilder>{
-      //"/" : (BuildContext context) => new HomePage(),
       "/SecondPage": (BuildContext context) => new SecondPage()
     }
       ));
