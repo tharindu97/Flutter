@@ -15,7 +15,7 @@ class _HomePageState extends State<HomePage> {
 
   String getText;
 
-  final String url = 'https://jsonplaceholder.typicode.com/posts';
+  final String url = 'http://localhost:3000/user/image';
   List data;
 
   @override
