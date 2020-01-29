@@ -5,7 +5,7 @@ void main() {
   runApp(
     MaterialApp(
       title: 'home',
-      home: SnackBarDemo(),
+      home: HomePage(),
       debugShowCheckedModeBanner: false,
     )
   );

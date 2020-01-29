@@ -23,15 +23,7 @@ class SnackBarPage extends StatelessWidget {
     return Center(
       child: RaisedButton(
         onPressed: () {
-          final snackBar = SnackBar(
-            content: Text('Hi Tharindu!'),
-            action: SnackBarAction(
-              label: 'Undo',
-              onPressed: () {
-                
-              },
-            ),
-          );
+          SnackBar snackBar = SnackBar(content: Text('Hi Tharindu!'));
           Scaffold.of(context).showSnackBar(snackBar);
         },
         child: Text('Submit'),
